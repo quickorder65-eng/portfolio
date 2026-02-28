@@ -1,0 +1,445 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMBER Café — премиальная кофейня</title>
+  <meta name="description" content="EMBER Café — уютная премиальная кофейня: specialty coffee, свежая выпечка и атмосферный интерьер." />
+
+  <!-- Fonts: serif for headings, sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,650,750&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Background grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand__mark" aria-hidden="true">☕</span>
+        <span class="brand__text">
+          <span class="brand__name">EMBER</span>
+          <span class="brand__tag">café</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Главная навигация">
+        <button class="nav__toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="#about">О нас</a></li>
+          <li><a class="nav__link" href="#menu">Меню</a></li>
+          <li><a class="nav__link" href="#footer">Контакты</a></li>
+          <li>
+            <a class="btn btn--small btn--ghost" href="#menu">
+              Смотреть меню
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="scroll-progress" aria-hidden="true">
+      <span class="scroll-progress__bar" id="scrollBar"></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-label="Главный экран">
+      <div class="hero__bg" id="heroBg" role="img" aria-label="Атмосферная кофейня"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal">
+          <span class="dot"></span>
+          Specialty coffee • Fresh pastry • Cozy vibes
+        </div>
+
+        <h1 class="hero__title reveal">
+          Кофе, который хочется <span class="accent">запомнить</span>
+        </h1>
+
+        <p class="hero__subtitle reveal">
+          Тёплые кофейные ноты, идеальная молочная текстура и свежая выпечка каждый день.
+          Заходите на чашку — останетесь ради атмосферы.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#menu">
+            Смотреть меню
+            <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+          </a>
+          <a class="btn btn--ghost" href="#about">
+            О кофейне
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="hero__meta reveal">
+          <div class="meta-card">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div>
+              <div class="meta-card__label">Локация</div>
+              <div class="meta-card__value">Центр города</div>
+            </div>
+          </div>
+          <div class="meta-card">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <div>
+              <div class="meta-card__label">Сегодня</div>
+              <div class="meta-card__value">08:00 — 22:00</div>
+            </div>
+          </div>
+          <div class="meta-card">
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+            <div>
+              <div class="meta-card__label">Зёрна</div>
+              <div class="meta-card__value">Single origin</div>
+            </div>
+          </div>
+        </div>
+
+        <a class="hero__scrollhint" href="#about" aria-label="Прокрутить к разделу О нас">
+          <span class="mouse" aria-hidden="true"></span>
+          <span>Листайте вниз</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-label="О нас">
+      <div class="container section__grid">
+        <div class="about reveal">
+          <p class="eyebrow">О нас</p>
+          <h2 class="h2">Уютное место, где каждый глоток — маленький ритуал</h2>
+          <p class="lead">
+            Мы варим coffee-first: бережная обжарка, точные рецептуры и бариста,
+            которые любят своё дело. Пространство — тёплое, спокойное, премиальное.
+          </p>
+
+          <ul class="about__list">
+            <li class="about__item">
+              <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span><strong>Стабильный вкус</strong> — контролируем экстракцию и молоко</span>
+            </li>
+            <li class="about__item">
+              <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span><strong>Свежая выпечка</strong> — круассаны, тарталетки, чизкейк</span>
+            </li>
+            <li class="about__item">
+              <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span><strong>Интерьер</strong> — дерево, камень, мягкий свет</span>
+            </li>
+          </ul>
+
+          <div class="about__cta">
+            <a class="btn btn--primary" href="#menu">
+              Выбрать напиток
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <button class="btn btn--ghost" id="openHours" type="button">
+              Часы работы
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="about-media reveal">
+          <div class="media-card">
+            <img
+              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80"
+              alt="Интерьер кофейни"
+              loading="lazy"
+            />
+            <div class="media-card__caption">
+              <span class="pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Тёплый свет</span>
+              <span class="pill"><i class="fa-solid fa-music"></i> Chill vibes</span>
+              <span class="pill"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+            </div>
+          </div>
+
+          <div class="about-mini">
+            <div class="mini-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80"
+                alt="Кофе в чашке"
+                loading="lazy"
+              />
+              <div class="mini-card__text">
+                <div class="mini-card__title">Signature</div>
+                <div class="mini-card__desc">Карамельный латте с нотами фундука</div>
+              </div>
+            </div>
+
+            <div class="mini-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=900&q=80"
+                alt="Бариста готовит кофе"
+                loading="lazy"
+              />
+              <div class="mini-card__text">
+                <div class="mini-card__title">Barista team</div>
+                <div class="mini-card__desc">Точность, забота и отличный вкус</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section section--alt" id="menu" aria-label="Меню">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <p class="eyebrow">Меню</p>
+            <h2 class="h2">Кофе и десерты — красиво, вкусно, честно</h2>
+            <p class="muted">Плейсхолдеры. Замените названия/цены под вашу кофейню.</p>
+          </div>
+
+          <div class="filters reveal" role="tablist" aria-label="Фильтр меню">
+            <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+            <button class="chip" data-filter="coffee" role="tab" aria-selected="false">Кофе</button>
+            <button class="chip" data-filter="dessert" role="tab" aria-selected="false">Десерты</button>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Coffee -->
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Эспрессо" loading="lazy">
+              <span class="tag">Coffee</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Эспрессо</h3>
+                <div class="price">₸ 900</div>
+              </div>
+              <p class="menu-card__desc">Плотный вкус, шоколадные ноты, бархатная крема.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Эспрессо" data-price="900">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">30 ml</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=1200&q=80" alt="Капучино" loading="lazy">
+              <span class="tag">Coffee</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Капучино</h3>
+                <div class="price">₸ 1 400</div>
+              </div>
+              <p class="menu-card__desc">Сбалансированный кофе и нежная молочная пена.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Капучино" data-price="1400">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">250 ml</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80" alt="Латте" loading="lazy">
+              <span class="tag">Coffee</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Латте</h3>
+                <div class="price">₸ 1 600</div>
+              </div>
+              <p class="menu-card__desc">Мягкий, сливочный, с карамельным послевкусием.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Латте" data-price="1600">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">300 ml</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Desserts -->
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=80" alt="Круассан" loading="lazy">
+              <span class="tag tag--alt">Dessert</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Круассан</h3>
+                <div class="price">₸ 1 200</div>
+              </div>
+              <p class="menu-card__desc">Хрустящая корочка и нежные слои сливочного теста.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Круассан" data-price="1200">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">1 шт</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=80" alt="Чизкейк" loading="lazy">
+              <span class="tag tag--alt">Dessert</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Чизкейк</h3>
+                <div class="price">₸ 1 800</div>
+              </div>
+              <p class="menu-card__desc">Кремовый, нежный, с лёгкой ванильной ноткой.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Чизкейк" data-price="1800">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">120 g</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card__media">
+              <img src="https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=1200&q=80" alt="Тарт ягодный" loading="lazy">
+              <span class="tag tag--alt">Dessert</span>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="h3">Ягодный тарт</h3>
+                <div class="price">₸ 2 100</div>
+              </div>
+              <p class="menu-card__desc">Нежный крем, свежие ягоды и тонкое песочное тесто.</p>
+              <div class="menu-card__actions">
+                <button class="btn btn--small btn--ghost addToCart" type="button" data-name="Ягодный тарт" data-price="2100">
+                  Добавить <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <span class="hint">1 порция</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Modal (hours) -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal__head">
+          <h3 class="h3" id="modalTitle">Часы работы</h3>
+          <button class="icon-btn" type="button" aria-label="Закрыть" data-close="true">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="modal__content">
+          <div class="hours">
+            <div class="hours__row"><span>Пн–Пт</span><span>08:00 — 22:00</span></div>
+            <div class="hours__row"><span>Сб</span><span>09:00 — 23:00</span></div>
+            <div class="hours__row"><span>Вс</span><span>09:00 — 21:00</span></div>
+          </div>
+
+          <div class="modal__note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p class="muted">Хотите, чтобы мы адаптировали блок под реальные адрес/телефон — просто замените текст в Footer.</p>
+          </div>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--primary" type="button" data-close="true">
+            Понял(а) <i class="fa-solid fa-check" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer" aria-label="Подвал">
+    <div class="container footer__grid">
+      <div class="footer__brand reveal">
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">☕</span>
+          <span class="brand__text">
+            <span class="brand__name">EMBER</span>
+            <span class="brand__tag">café</span>
+          </span>
+        </div>
+        <p class="muted">
+          Премиальная кофейня для тех, кто ценит вкус, атмосферу и спокойный ритм.
+        </p>
+      </div>
+
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Контакты</h3>
+        <ul class="footer__list">
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Москва, центр </li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> +7 (777) 000-00-00</li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@ember.cafe</li>
+        </ul>
+      </div>
+
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Часы</h3>
+        <ul class="footer__list">
+          <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Пн–Пт: 08:00 — 22:00</li>
+          <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Сб: 09:00 — 23:00</li>
+          <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Вс: 09:00 — 21:00</li>
+        </ul>
+      </div>
+
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Соцсети</h3>
+        <div class="social">
+          <a class="social__link" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social__link" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a class="social__link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a class="social__link" href="#" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+        </div>
+
+        <div class="footer__cta">
+          <a class="btn btn--small btn--primary" href="#top">
+            Наверх <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="muted">© <span id="year"></span> EMBER Café. Все права защищены.</p>
+      <p class="muted">Сделано с теплом ☕</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
